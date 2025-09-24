@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#474a9a">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_170"
+            android:layout_marginTop="@dimen/margin_100"
+            android:layout_marginBottom="@dimen/text_size_20"
+            android:contentDescription="@string/logo_facebook"
+            android:foregroundGravity="center"
+            android:src="@drawable/facebook_page_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_130"
+            android:layout_marginBottom="@dimen/margin_50"
+            android:text="@string/change_language"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_20" />
+
+        <EditText
+            android:id="@+id/username_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_70"
+            android:width="@dimen/width_300"
+            android:autofillHints="Email or Phone"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:hint="@string/emailorphone"
+            android:inputType="text"
+            android:padding="@dimen/padding_10"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_70"
+            android:layout_marginTop="@dimen/margin_30"
+            android:width="@dimen/width_300"
+            android:autofillHints="password"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="@dimen/padding_10"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_70"
+            android:layout_marginTop="@dimen/margin_30"
+            android:width="@dimen/width_300"
+            android:background="@color/dark_blue"
+            android:text="@string/login"
+            android:textAlignment="center" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="@dimen/width_300"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_50"
+                android:layout_marginTop="@dimen/max_text_size_200"
+                android:gravity="center"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_50"
+                android:layout_marginTop="@dimen/text_size_20"
+                android:gravity="center"
+                android:text="@string/forgot_password"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20" />
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="350dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/question_mark" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

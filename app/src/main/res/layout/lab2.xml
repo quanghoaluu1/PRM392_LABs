@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/background_blue"
+        android:gravity="left"
+        android:padding="10sp"
+        android:text="Hello Toast"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold"
+ />
+
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:background="@color/background_yellow"
+        android:text="TOAST"
+        android:textSize="@dimen/text_size_24"
+        android:textStyle="bold"
+        android:layout_marginTop="20sp"/>
+
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="match_parent"
+        android:layout_height="500sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="@dimen/max_text_size_200"
+        android:background="@color/background_yellow"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/text_blue"
+        android:layout_marginTop="@dimen/text_size_24" />
+
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:layout_weight="1"
+        android:background="@color/background_blue"
+        android:text="COUNT"
+        android:textSize="@dimen/text_size_24"
+        android:textStyle="bold"
+        android:layout_marginTop="20sp" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:layout_weight="1"
+        android:background="@color/background_blue"
+        android:text="RESET"
+        android:textSize="@dimen/text_size_24"
+        android:textStyle="bold"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="30sp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

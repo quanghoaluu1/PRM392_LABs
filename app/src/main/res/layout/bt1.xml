@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:textColor="#E76F00"
+        android:background="@drawable/blue_border"
+        android:text="Java" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:background="@drawable/red_border"
+        android:text="C#" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:textColor="#00ADD8"
+        android:background="#5DC9E2"
+        android:text="Go" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:textColor="#DEA584"
+        android:background="#262626"
+        android:text="Rust" />
+</androidx.appcompat.widget.LinearLayoutCompat>

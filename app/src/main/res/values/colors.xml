@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_blue">#3F51B5</color>
+    <color name="text_blue">#0000FF</color>
+    <color name="background_yellow">#FFEB3B</color>
+    <color name="background_dark_gray">#2C2C2C</color>
+    <color name="orange">#FF5C00</color>
+    <color name="instagram_purple">#a400e3</color>
+    <color name="instagram_pink">#ff0086</color>
+    <color name="button_border_purple">#732fa5</color>
+    <color name="button_pink">#e37fe1</color>
+    <color name="blur_pink">#da008c</color>
+    <color name="dark_blue">#6f7ab2</color>
+    <color name="light_grey">#b3b3b3</color>
+    <color name="fpt_green">#51b848</color>
+    <color name="fpt_orange">#f37021</color>
+    <color name="fpt_blue">#034ea2</color>
+</resources>

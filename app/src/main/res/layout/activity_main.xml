@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:padding="50dp"
+        >
+        <Button
+            android:id="@+id/button_lab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Lab 1"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/button_lab2"
+            android:layout_marginTop="50dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lab 2"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/button_lab3"
+            android:layout_marginTop="50dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lab 3"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/button_lab4"
+            android:layout_marginTop="50dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lab 4"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/button_lab5"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lab 5"
+            android:layout_weight="1"
+            />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

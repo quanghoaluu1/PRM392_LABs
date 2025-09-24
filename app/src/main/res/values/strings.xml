@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">SE183138</string>
+    <string name="logo_spiderman">Logo_Spiderman</string>
+    <string name="logo_facebook">Logo Facebook</string>
+    <string name="logo_instagram">Logo Instagram</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="emailorphone">Email or Phone</string>
+    <string name="login">LOG IN</string>
+    <string name="forgot_detail">Forgot your detail? Get help signing in.</string>
+    <string name="login_with_facebook">Log in with Facebook</string>
+    <string name="dont_have_account">Don\'t have an account? Sign up.</string>
+    <string name="change_language">English - Change</string>
+    <string name="sign_up">Sign Up for Facebook</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="or">OR</string>
+    <string name="login_vi">Đăng nhập</string>
+    <string name="email_or_phone_vi">Email hoặc số điện thoại</string>
+    <string name="password_vi">Mật khẩu</string>
+    <string name="dont_have_account_vi">Bạn chưa có tài khoản?</string>
+    <string name="create_a_account_vi">Hãy tạo một tài khoản.</string>
+    <string name="or_vi">HOẶC</string>
+    <string name="sign_up_account_vi">Đăng ký tài khoản</string>
+    <string name="sign_up_vi">Đăng ký</string>
+    <string name="confirm_password_vi">Nhập lại mật khẩu</string>
+    <string name="already_have_account_vi">Đã có tài khoản?</string>
+    <string name="chooose_login_vi">Chọn đăng nhập</string>
+    <string name="comeback_login">Quay lại đăng nhập</string>
+    <string name="login_success_vi">Bạn đã đăng nhập thành công!</string>
+    <string name="hello">Xin chào, </string>
+    <string name="welcome_user">Người dùng!</string>
+    <string name="welcome_format">%s!</string>
+</resources>

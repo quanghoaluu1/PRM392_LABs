@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_100"
+            android:contentDescription="@string/logo_instagram"
+            android:layout_gravity="center"
+            android:src="@drawable/instagram_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/username_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_70"
+            android:width="@dimen/width_300"
+            android:autofillHints="username"
+            android:background="@color/button_pink"
+            android:ems="10"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:padding="@dimen/padding_10"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_70"
+            android:layout_marginTop="@dimen/margin_30"
+            android:width="@dimen/width_300"
+            android:background="@color/button_pink"
+            android:ems="10"
+            android:autofillHints="password"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="@dimen/padding_10"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_70"
+            android:layout_marginTop="@dimen/margin_30"
+            android:width="@dimen/width_300"
+            android:background="@drawable/button_border"
+            android:text="@string/login"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/tv_forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_80"
+            android:layout_marginTop="@dimen/margin_30"
+            android:gravity="center"
+            android:text="@string/forgot_detail"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:text="@string/or"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/facebook_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/facebook_logo"
+                android:layout_marginStart="@dimen/margin_70"
+                android:layout_marginTop="@dimen/margin_60"
+                android:clickable="true"/>
+
+            <TextView
+                android:id="@+id/tv_login_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/login_with_facebook"
+                android:layout_marginTop="@dimen/padding_80"
+                android:textSize="@dimen/text_size_20"
+                android:layout_marginStart="@dimen/margin_30"
+                android:textColor="@color/white"
+                android:clickable="true"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_60"
+            android:background="@color/blur_pink"
+            android:textSize="@dimen/text_size_20"
+            android:text="@string/dont_have_account"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:padding="@dimen/padding_10"
+            android:layout_marginTop="@dimen/margin_110"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
