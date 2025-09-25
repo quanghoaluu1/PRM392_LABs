@@ -44,8 +44,8 @@ public class UserRepository {
             // Prepare user data for insertion
             ContentValues values = new ContentValues();
             values.put(Lab5SqliteHelper.COLUMN_EMAIL, user.getEmail());
-            values.put(Lab5SqliteHelper.COLUMN_PASS, user.getPassword());
-            values.put(Lab5SqliteHelper.COLUMN_REPASS, user.getRepass());
+            values.put(Lab5SqliteHelper.COLUMN_PASS, HashUtils.sha256(user.getPassword()));
+            values.put(Lab5SqliteHelper.COLUMN_REPASS, HashUtils.sha256(user.getRepass()));
 
             // Insert user data into database
             long result = db.insert(Lab5SqliteHelper.TABLE_USER, null, values);
@@ -75,17 +75,20 @@ public class UserRepository {
             // Get readable database instance
             db = dbHelper.getReadableDatabase();
 
-            // Define query parameters for user authentication
-            String[] columns = {Lab5SqliteHelper.COLUMN_EMAIL};
-            String selection = Lab5SqliteHelper.COLUMN_EMAIL + " = ? AND " + Lab5SqliteHelper.COLUMN_PASS + " = ?";
-            String[] selectionArgs = {email, pass};
-
-            // Execute query to find matching user credentials
-            cursor = db.query(Lab5SqliteHelper.TABLE_USER, columns, selection, selectionArgs,
-                    null, null, null);
-
-            // Return true if user found (cursor has at least one row)
-            return cursor.moveToFirst();
+            cursor = db.rawQuery(
+                    "SELECT " + dbHelper.COLUMN_PASS +
+                            " FROM " + dbHelper.TABLE_USER +
+                            " WHERE " + dbHelper.COLUMN_EMAIL + "=?",
+                    new String[]{email}
+            );
+            // Check if a record was found for the given email
+             if(cursor.moveToFirst()){
+                 String storedHash = cursor.getString(0);
+                 cursor.close();
+                 String inputHash = HashUtils.sha256(pass);
+                    return storedHash.equals(inputHash);
+             }
+            return false;
         } catch (SQLiteException e) {
             Log.e(TAG, "Error during login: " + e.getMessage());
             return false;

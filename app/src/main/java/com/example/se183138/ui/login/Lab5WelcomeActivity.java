@@ -25,7 +25,7 @@ public class Lab5WelcomeActivity extends AppCompatActivity {
             // Enable edge-to-edge display for modern UI
             EdgeToEdge.enable(this);
             // Set the layout for this activity
-            setContentView(R.layout.lab5_success);
+            setContentView(R.layout.lab5_welcome);
 
             // Find the TextView that will display the welcome message
             TextView tv_email = findViewById(R.id.tv_email);
