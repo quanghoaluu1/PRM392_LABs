@@ -58,6 +58,14 @@
             android:text="Lab 5"
             android:layout_weight="1"
             />
+        <Button
+            android:id="@+id/button_lab6"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lab 6"
+            android:layout_weight="1"
+            />
 
     </GridLayout>
 

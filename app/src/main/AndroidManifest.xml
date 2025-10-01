@@ -28,7 +28,10 @@
         <activity android:name=".ui.login.Lab5SignUpActivity" />
         <activity android:name=".ui.login.Lab5MainActivity"/>
         <activity android:name=".ui.login.Lab5WelcomeActivity"/>
-
+        <activity android:name=".Lab6LoginActivity"/>
+        <activity android:name=".Lab6MainActivity"/>
+        <activity android:name=".Lab6SignupActivity"/>
+        <activity android:name=".Lab6WelcomeActivity"/>
     </application>
 
 </manifest>
