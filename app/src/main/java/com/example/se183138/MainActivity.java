@@ -12,8 +12,7 @@ import com.example.se183138.activity.lab3.Lab3Activity;
 import com.example.se183138.activity.lab4.Lab4InstagramActivity;
 import com.example.se183138.activity.lab6.Lab6LoginActivity;
 import com.example.se183138.activity.lab5.Lab5MainActivity;
-import com.example.se183138.activity.lab7.Lab7LoginActivity;
-import com.example.se183138.activity.lab7.Lab7SignupActivity;
+import com.example.se183138.activity.lab8.Lab8LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, Lab6LoginActivity.class));
         });
         findViewById(R.id.button_lab7).setOnClickListener(v -> {
-            startActivity(new Intent(this, Lab7LoginActivity.class));
+            startActivity(new Intent(this, Lab8LoginActivity.class));
         });
         }
     }

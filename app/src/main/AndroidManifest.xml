@@ -2,7 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
     <application
         android:allowBackup="true"
         android:usesCleartextTraffic="true"
@@ -34,9 +43,10 @@
         <activity android:name=".activity.lab6.Lab6MainActivity"/>
         <activity android:name=".activity.lab6.Lab6SignupActivity"/>
         <activity android:name=".activity.lab6.Lab6WelcomeActivity"/>
-        <activity android:name=".activity.lab7.Lab7LoginActivity"/>
-        <activity android:name=".activity.lab7.Lab7SignupActivity"/>
-        <activity android:name=".activity.lab7.Lab7WelcomeActivity"/>
+        <activity android:name=".activity.lab8.Lab8LoginActivity"/>
+        <activity android:name=".activity.lab8.Lab8SignupActivity"/>
+        <activity android:name=".activity.lab8.Lab8WelcomeActivity"/>
+        <activity android:name=".activity.lab8.Lab8ForgotPasswordActivity"/>
     </application>
 
 </manifest>

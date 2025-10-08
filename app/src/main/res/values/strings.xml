@@ -30,4 +30,7 @@
     <string name="hello">Xin chào, </string>
     <string name="welcome_user">Người dùng!</string>
     <string name="welcome_format">%s!</string>
+    <string name="newpassword">New Password</string>
+    <string name="confirm_newpassword">Confirm new password</string>
+    <string name="reset_password">Reset your password</string>
 </resources>
