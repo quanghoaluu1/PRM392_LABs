@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -20,18 +22,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Lab2Activity" />
-        <activity android:name=".Lab1Activity" />
-        <activity android:name=".Lab3Activity" />
-        <activity android:name=".Lab4FacebookActivity" />
-        <activity android:name=".Lab4InstagramActivity" />
-        <activity android:name=".ui.login.Lab5SignUpActivity" />
-        <activity android:name=".ui.login.Lab5MainActivity"/>
-        <activity android:name=".ui.login.Lab5WelcomeActivity"/>
-        <activity android:name=".Lab6LoginActivity"/>
-        <activity android:name=".Lab6MainActivity"/>
-        <activity android:name=".Lab6SignupActivity"/>
-        <activity android:name=".Lab6WelcomeActivity"/>
+        <activity android:name=".activity.lab2.Lab2Activity" />
+        <activity android:name=".activity.lab1.Lab1Activity" />
+        <activity android:name=".activity.lab3.Lab3Activity" />
+        <activity android:name=".activity.lab4.Lab4FacebookActivity" />
+        <activity android:name=".activity.lab4.Lab4InstagramActivity" />
+        <activity android:name=".activity.lab5.Lab5SignUpActivity" />
+        <activity android:name=".activity.lab5.Lab5MainActivity"/>
+        <activity android:name=".activity.lab5.Lab5WelcomeActivity"/>
+        <activity android:name=".activity.lab6.Lab6LoginActivity"/>
+        <activity android:name=".activity.lab6.Lab6MainActivity"/>
+        <activity android:name=".activity.lab6.Lab6SignupActivity"/>
+        <activity android:name=".activity.lab6.Lab6WelcomeActivity"/>
+        <activity android:name=".activity.lab7.Lab7LoginActivity"/>
+        <activity android:name=".activity.lab7.Lab7SignupActivity"/>
+        <activity android:name=".activity.lab7.Lab7WelcomeActivity"/>
     </application>
 
 </manifest>

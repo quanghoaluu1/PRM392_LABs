@@ -1,4 +1,4 @@
-package com.example.se183138;
+package com.example.se183138.activity.lab6;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.se183138.R;
 import com.example.se183138.present.LoginPresenter;
 import com.example.se183138.view.LoginView;
 

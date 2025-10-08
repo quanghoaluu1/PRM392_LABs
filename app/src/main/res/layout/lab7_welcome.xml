@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/layout_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        android:contentDescription="Welcome_pages"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+        <!-- FPT Logo -->
+        <ImageView
+            android:id="@+id/image_fpt_logo_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:contentDescription="lo_fpt"
+            android:src="@drawable/fpt_logo"
+            tools:ignore="ImageContrastCheck" />
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/text_welcome_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_fpt_logo_welcome"
+            android:layout_centerInParent="true"
+            android:contentDescription="Welcome_message"
+            android:gravity="center"
+            android:text="xin chào"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <!-- ImageView cho hình đại diện (avatar) hình tròn -->
+        <ImageView
+            android:id="@+id/avatar_image"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/text_welcome_message"
+            android:layout_centerHorizontal="true"
+            android:alpha="1.0"
+            android:clickable="false"
+            android:contentDescription="avatar_image"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/default_avatar"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/insert_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@id/avatar_image"
+            android:layout_alignBottom="@id/avatar_image"
+            android:layout_marginEnd="-10dp"
+            android:layout_marginBottom="-10dp"
+            android:contentDescription="Insert_image"
+            android:src="@drawable/circle_shape"
+            app:tint="#000000" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

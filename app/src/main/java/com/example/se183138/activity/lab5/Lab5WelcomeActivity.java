@@ -1,4 +1,4 @@
-package com.example.se183138.ui.login;
+package com.example.se183138.activity.lab5;
 
 import android.os.Bundle;
 import android.widget.TextView;

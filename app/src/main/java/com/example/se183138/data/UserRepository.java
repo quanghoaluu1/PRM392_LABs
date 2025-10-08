@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteException;
 import android.util.Log;
 
 import com.example.se183138.data.model.LoggedInUser;
-import com.example.se183138.ui.login.Lab5SqliteHelper;
+import com.example.se183138.activity.lab5.Lab5SqliteHelper;
 
 /**
  * Repository class responsible for managing user data operations

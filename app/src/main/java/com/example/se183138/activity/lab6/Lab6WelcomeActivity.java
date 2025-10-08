@@ -1,4 +1,4 @@
-package com.example.se183138;
+package com.example.se183138.activity.lab6;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.se183138.R;
 import com.example.se183138.model.User;
 import com.example.se183138.view.WelcomeView;
 import com.google.firebase.auth.FirebaseAuth;

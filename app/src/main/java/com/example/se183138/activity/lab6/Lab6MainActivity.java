@@ -1,4 +1,4 @@
-package com.example.se183138;
+package com.example.se183138.activity.lab6;
 
 import androidx.appcompat.app.AppCompatActivity;
 

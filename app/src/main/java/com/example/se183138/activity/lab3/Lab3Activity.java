@@ -1,4 +1,4 @@
-package com.example.se183138;
+package com.example.se183138.activity.lab3;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.se183138.R;
 
 public class Lab3Activity extends AppCompatActivity implements View.OnClickListener {
 

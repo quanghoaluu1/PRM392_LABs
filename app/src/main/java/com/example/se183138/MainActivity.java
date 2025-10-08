@@ -6,7 +6,14 @@ import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.se183138.ui.login.Lab5MainActivity;
+import com.example.se183138.activity.lab1.Lab1Activity;
+import com.example.se183138.activity.lab2.Lab2Activity;
+import com.example.se183138.activity.lab3.Lab3Activity;
+import com.example.se183138.activity.lab4.Lab4InstagramActivity;
+import com.example.se183138.activity.lab6.Lab6LoginActivity;
+import com.example.se183138.activity.lab5.Lab5MainActivity;
+import com.example.se183138.activity.lab7.Lab7LoginActivity;
+import com.example.se183138.activity.lab7.Lab7SignupActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_lab6).setOnClickListener(v -> {
             startActivity(new Intent(this, Lab6LoginActivity.class));
         });
-
+        findViewById(R.id.button_lab7).setOnClickListener(v -> {
+            startActivity(new Intent(this, Lab7LoginActivity.class));
+        });
+        }
     }
-
-}
