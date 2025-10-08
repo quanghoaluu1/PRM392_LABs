@@ -125,8 +125,10 @@ public class Lab8LoginActivity extends AppCompatActivity {
                         LoginResponse loginResponse = response.body();
                         LoginResponse.User user = loginResponse.getUser();
                         String username = user.getUsername();
+                        String avatar = user.getAvatar();
                         Intent intent = new Intent(Lab8LoginActivity.this, Lab8WelcomeActivity.class);
                         intent.putExtra("username", username);
+                        intent.putExtra("avatar", avatar);
                         startActivity(intent);
                         finish();
                     } else {
