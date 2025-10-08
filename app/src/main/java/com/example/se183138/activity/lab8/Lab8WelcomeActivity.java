@@ -47,6 +47,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * Màn hình chào mừng sau đăng nhập (Lab 8).
+ * - Hiển thị thông tin người dùng (tên, avatar)
+ * - Cho phép chụp/chọn ảnh từ thư viện và tải lên server
+ * - Hỗ trợ đăng xuất, xin quyền CAMERA và READ_MEDIA_IMAGES
+ */
 public class Lab8WelcomeActivity extends AppCompatActivity {
     private static final int REQUEST_PERMISSION_CAMERA = 100;
     private static final int REQUEST_PERMISSION_STORAGE = 101;
@@ -117,6 +123,7 @@ public class Lab8WelcomeActivity extends AppCompatActivity {
                 }
             });
 
+    /** Khởi tạo UI, đọc intent, cấu hình sự kiện và dịch vụ API. */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -170,6 +177,7 @@ public class Lab8WelcomeActivity extends AppCompatActivity {
         btnUpload.setOnClickListener(v -> uploadImage());
     }
 
+    /** Hiển thị hộp thoại cho phép người dùng chụp ảnh hoặc chọn ảnh. */
     // Hiển thị lựa chọn chụp ảnh hoặc chọn ảnh từ thư viện
     private void showImageOptions() {
         String[] options = {"Chụp ảnh", "Chọn từ thư viện"};
@@ -208,6 +216,7 @@ public class Lab8WelcomeActivity extends AppCompatActivity {
         builder.show();
     }
 
+    /** Mở ứng dụng Camera (sau khi đã được cấp quyền). */
     // Mở camera để chụp ảnh
     @SuppressLint("QueryPermissionsNeeded")
     private void openCamera() {
@@ -218,6 +227,7 @@ public class Lab8WelcomeActivity extends AppCompatActivity {
     }
 
 
+    /** Mở thư viện ảnh để chọn ảnh (sau khi đã được cấp quyền). */
     // Mở thư viện ảnh
     private void openGallery() {
 //        Intent pickPhotoIntent = new Intent(Intent.ACTION_PICK,
@@ -231,6 +241,10 @@ public class Lab8WelcomeActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Tạo file tạm từ ảnh đã chọn và gọi API upload avatar.
+     * Hiển thị thông báo theo kết quả trả về.
+     */
     private void uploadImage() {
         if (selectedImageUri == null) {
             Toast.makeText(this, "Chọn ảnh trước đã!", Toast.LENGTH_SHORT).show();
@@ -280,6 +294,7 @@ public class Lab8WelcomeActivity extends AppCompatActivity {
         }
     }
 
+    /** Xử lý kết quả yêu cầu quyền và thực hiện hành động tương ứng. */
     // Xử lý yêu cầu quyền
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
@@ -299,6 +314,7 @@ public class Lab8WelcomeActivity extends AppCompatActivity {
             }
         }
     }
+    /** Nhận kết quả từ các Activity khác (fallback cho một số trường hợp). */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

@@ -18,6 +18,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * Màn hình quên mật khẩu (Lab 8).
+ * - Nhập tên người dùng và mật khẩu mới
+ * - Gửi yêu cầu đặt lại mật khẩu tới server
+ */
 public class Lab8ForgotPasswordActivity extends AppCompatActivity {
     private static final String TAG = "ForgotPasswordActivity";
 
@@ -25,6 +30,7 @@ public class Lab8ForgotPasswordActivity extends AppCompatActivity {
     private Button buttonResetPassword;
     ApiService apiService;
 
+    /** Khởi tạo UI và thiết lập sự kiện đặt lại mật khẩu. */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +45,7 @@ public class Lab8ForgotPasswordActivity extends AppCompatActivity {
         buttonResetPassword.setOnClickListener(v -> resetPassword());
     }
 
+    /** Kiểm tra hợp lệ và gọi API đặt lại mật khẩu. */
     private void resetPassword(){
         String username = inputUsername.getText().toString().trim();
         String newPassword = inputNewPassword.getText().toString().trim();

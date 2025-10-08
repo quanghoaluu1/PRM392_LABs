@@ -19,11 +19,17 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * Màn hình đăng ký tài khoản (Lab 8).
+ * - Thu thập thông tin đăng ký và gọi API tạo tài khoản
+ * - Điều hướng về màn hình đăng nhập sau khi đăng ký thành công
+ */
 public class Lab8SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
     ApiService apiService;
     private EditText inputUsername, inputPassword, inputRepassword;
 
+    /** Khởi tạo UI và gán sự kiện cho các nút. */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +56,7 @@ public class Lab8SignupActivity extends AppCompatActivity {
         });
     }
 
+    /** Gọi API đăng ký với dữ liệu người dùng và xử lý phản hồi. */
     private void register() {
         final String username = inputUsername.getText().toString().trim();
         final String password = inputPassword.getText().toString().trim();

@@ -22,6 +22,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * Màn hình đăng nhập (Lab 8).
+ * - Gửi yêu cầu đăng nhập tới server, lưu tuỳ chọn "Ghi nhớ"
+ * - Điều hướng sang màn hình chào mừng khi thành công
+ * - Kiểm tra phiên đăng nhập hiện tại (session) khi khởi chạy
+ */
 public class Lab8LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private EditText inputUsername, inputPassword;
@@ -30,6 +36,7 @@ public class Lab8LoginActivity extends AppCompatActivity {
     private SharedPreferences prefs;
     ApiService apiService;
 
+    /** Khởi tạo UI, gán sự kiện và kiểm tra session trên server. */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +61,7 @@ public class Lab8LoginActivity extends AppCompatActivity {
         buttonForgotPassword.setOnClickListener(v -> startActivity(new Intent(Lab8LoginActivity.this, Lab8ForgotPasswordActivity.class)));
     }
 
+    /** Gọi API đăng nhập với tham số từ giao diện và xử lý phản hồi. */
     private void login() {
         // Lấy giá trị từ các trường nhập liệu
         final String username = inputUsername.getText().toString().trim();
@@ -114,6 +122,7 @@ public class Lab8LoginActivity extends AppCompatActivity {
         });
     }
 
+    /** Kiểm tra phiên đăng nhập hợp lệ từ server để tự động đăng nhập. */
     private void checkServerSession() {
         apiService = RetrofitClient.getRetrofitInstance(this).create(ApiService.class);
         apiService.checkSession("check_session").enqueue(new Callback<LoginResponse>() {

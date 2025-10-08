@@ -17,9 +17,17 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
+/**
+ * Cấu hình Retrofit/OkHttp dùng CookieJar để lưu phiên (session) và bật logging.
+ * Gọi {@link #getRetrofitInstance(Context)} để lấy instance dùng chung.
+ */
 public class RetrofitClient {
     private static Retrofit retrofit = null;
 
+    /**
+     * Tạo hoặc trả về Retrofit singleton với cookie jar và interceptor log.
+     * @param context Context dùng để lưu trữ cookie bền vững
+     */
     public static Retrofit getRetrofitInstance(Context context) {
         if (retrofit == null) {
             HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
@@ -35,7 +43,7 @@ public class RetrofitClient {
                     .addInterceptor(logging)
                     .build();
             retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.1.149/")
+                    .baseUrl("http://192.168.100.5/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(client)
                     .build();

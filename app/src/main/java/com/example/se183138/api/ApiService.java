@@ -10,10 +10,15 @@ import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 
+/**
+ * Khai báo các endpoint API cho chức năng Lab 8.
+ * Lưu ý: Tên trường form phải khớp với backend PHP.
+ */
 public interface ApiService {
 
     @FormUrlEncoded
     @POST("login_signup_api.php")
+    /** Đăng nhập với tuỳ chọn ghi nhớ phiên. */
     Call<LoginResponse> login(
             @Field("action") String action,
             @Field("acc_kh") String username,
@@ -23,6 +28,7 @@ public interface ApiService {
 
     @FormUrlEncoded
     @POST("login_signup_api.php")
+    /** Đăng ký tài khoản mới. */
     Call<ApiResponse> signup(
         @Field("action") String action,
         @Field("acc_kh") String username,
@@ -32,6 +38,7 @@ public interface ApiService {
 
     @FormUrlEncoded
     @POST("login_signup_api.php")
+    /** Đặt lại mật khẩu theo tài khoản. */
     Call<ApiResponse> forgotPassword(
         @Field("action") String action,
         @Field("acc_kh") String username,
@@ -41,14 +48,17 @@ public interface ApiService {
 
     @FormUrlEncoded
     @POST("login_signup_api.php")
+    /** Kiểm tra phiên đăng nhập hiện tại. */
     Call<LoginResponse> checkSession(@Field("action") String action);
 
     @FormUrlEncoded
     @POST("login_signup_api.php")
+    /** Đăng xuất khỏi phiên hiện tại. */
     Call<ApiResponse> logout(@Field("action") String action);
 
     @Multipart
     @POST("upload_avatar_api.php")
+    /** Tải lên ảnh đại diện dạng multipart. */
     Call<LoginResponse> uploadAvatar(
             @Part("username") RequestBody username,
             @Part MultipartBody.Part avatar
