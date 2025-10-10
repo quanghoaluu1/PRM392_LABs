@@ -13,6 +13,7 @@ import com.example.se183138.activity.lab4.Lab4InstagramActivity;
 import com.example.se183138.activity.lab6.Lab6LoginActivity;
 import com.example.se183138.activity.lab5.Lab5MainActivity;
 import com.example.se183138.activity.lab8.Lab8LoginActivity;
+import com.example.se183138.activity.lab9.Lab9MapActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,5 +44,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_lab7).setOnClickListener(v -> {
             startActivity(new Intent(this, Lab8LoginActivity.class));
         });
-        }
+        findViewById(R.id.button_lab9).setOnClickListener(v -> {
+            startActivity(new Intent(this, Lab9MapActivity.class));
+        });
+    }
     }

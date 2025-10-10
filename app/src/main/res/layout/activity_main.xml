@@ -71,7 +71,15 @@
             android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lab 7"
+            android:text="Lab 8"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/button_lab9"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lab 9"
             android:layout_weight="1"
             />
 
