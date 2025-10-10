@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     
-    <!-- Search container at top (Google Maps style) -->
+    <!-- Route Planning Container -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:layout_margin="16dp">
         
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/searchCard"
+            android:id="@+id/routeCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardElevation="8dp"
@@ -28,53 +28,151 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp"
-                android:gravity="center_vertical">
+                android:orientation="vertical"
+                android:padding="12dp">
                 
-                <ImageView
-                    android:id="@+id/ivBack"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:padding="8dp"
-                    android:src="@android:drawable/ic_menu_close_clear_cancel"
-                    android:contentDescription="Back"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:visibility="gone"/>
-                
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:padding="8dp"
-                    android:src="@android:drawable/ic_menu_search"
-                    android:contentDescription="Search"
-                    app:tint="@android:color/background_dark" />
-                
-                <EditText
-                    android:id="@+id/etSearchAddress"
-                    android:layout_width="0dp"
+                <!-- Departure Location -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="Tìm địa chỉ"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/darker_gray"
-                    android:imeOptions="actionSearch"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:background="@android:color/transparent"
-                    android:textSize="16sp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"/>
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/presence_online"
+                        android:contentDescription="Departure"
+                        app:tint="#4CAF50" />
+                    
+                    <EditText
+                        android:id="@+id/etDeparture"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Departure location"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:background="@android:color/transparent"
+                        android:textSize="16sp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="8dp"/>
+                    
+                    <ImageView
+                        android:id="@+id/ivClearDeparture"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:padding="6dp"
+                        android:src="@android:drawable/ic_menu_close_clear_cancel"
+                        android:contentDescription="Clear"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:visibility="gone"/>
+                </LinearLayout>
                 
-                <ImageView
-                    android:id="@+id/ivClearSearch"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:padding="8dp"
-                    android:src="@android:drawable/ic_menu_close_clear_cancel"
-                    android:contentDescription="Clear"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:visibility="gone"/>
+                <!-- Current Location Option for Departure -->
+                <TextView
+                    android:id="@+id/tvDepartureCurrentLoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Use current location"
+                    android:textColor="#2196F3"
+                    android:textSize="14sp"
+                    android:paddingStart="36dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="visible"/>
+                
+                <!-- Divider with Swap Button -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp">
+                    
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_centerVertical="true"/>
+                    
+                    <ImageView
+                        android:id="@+id/btnSwapLocations"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:src="@android:drawable/ic_menu_sort_by_size"
+                        android:rotation="90"
+                        android:padding="8dp"
+                        android:background="@android:color/white"
+                        android:contentDescription="Swap locations"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:tint="#2196F3"/>
+                </RelativeLayout>
+                
+                <!-- Destination Location -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_mylocation"
+                        android:contentDescription="Destination"
+                        app:tint="#F44336" />
+                    
+                    <EditText
+                        android:id="@+id/etDestination"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Destination location"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:background="@android:color/transparent"
+                        android:textSize="16sp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="8dp"/>
+                    
+                    <ImageView
+                        android:id="@+id/ivClearDestination"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:padding="6dp"
+                        android:src="@android:drawable/ic_menu_close_clear_cancel"
+                        android:contentDescription="Clear"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:visibility="gone"/>
+                </LinearLayout>
+                
+                <!-- Current Location Option for Destination -->
+                <TextView
+                    android:id="@+id/tvDestinationCurrentLoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Use current location"
+                    android:textColor="#2196F3"
+                    android:textSize="14sp"
+                    android:paddingStart="36dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="visible"/>
                     
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -100,13 +198,52 @@
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
     
+    <!-- Distance Info Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/distanceCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@android:color/white"
+        android:visibility="gone">
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:gravity="center">
+            
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distance: 0 km"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+            
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duration: 0 min"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnRecenter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="20dp"
-        android:contentDescription="Định vị lại"
+        android:contentDescription="Recenter map"
         app:srcCompat="@android:drawable/ic_menu_mylocation"
         app:backgroundTint="@color/background_yellow"
         app:tint="@android:color/black" />
